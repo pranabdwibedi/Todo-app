@@ -23,8 +23,6 @@ addForm.addEventListener("submit", (event)=>{
 })
 document.addEventListener("DOMContentLoaded",()=>{
     let container = document.getElementById("taskContainer")
-    let box = document.createElement("div");
-    box.setAttribute("class", "d-flex justify-content-center align-items-center")
     fetch("http://localhost:8080/task", {
         method: "GET",
         headers:{
@@ -33,16 +31,16 @@ document.addEventListener("DOMContentLoaded",()=>{
     }).then(async response=>{
         if(response.status == 404){
             let content = document.createElement("span")
-            content.setAttribute("class", "boldText fs-3")
+            content.setAttribute("class", "boldText fs-3 text-center")
             content.innerText = "No Task Found"
-            box.appendChild(content)
-            container.appendChild(box)
+            container.appendChild(content)
             return
         }else{
             let data = await response.json()
             console.log(data);
             for(let task in data){
-                box.setAttribute("class", "d-flex justify-content-between gap-3 align-items-center")
+                let box = document.createElement("div");
+                box.setAttribute("class", "d-flex justify-content-between gap-3 align-items-center bg-black")
                 let title = document.createElement("span")
                 title.innerText = data[task].title
                 title.setAttribute("class", "flex-grow-1")
