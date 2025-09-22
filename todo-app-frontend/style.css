@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding: 50px;
+}
+.toggleIcon{
+    height: 100%;
+}
+.hoverPointer{
+    cursor: pointer;
+}
+.strikeText{
+    text-decoration: line-through;
+}
+.boldText{
+    font-weight: bold;
+}
