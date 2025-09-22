@@ -18,6 +18,3 @@ body{
 .boldText{
     font-weight: bold;
 }
-#taskContainer>div{
-    width: 100%;
-}

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             console.log(data);
             for(let task in data){
                 let box = document.createElement("div");
-                box.setAttribute("class", "d-flex justify-content-between gap-3 align-items-center bg-black")
+                box.setAttribute("class", "d-flex justify-content-between gap-3 align-items-center")
                 let title = document.createElement("span")
                 title.innerText = data[task].title
                 title.setAttribute("class", "flex-grow-1")
